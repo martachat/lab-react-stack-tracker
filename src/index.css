@@ -28,9 +28,11 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
   line-height: 1.1;
+  margin-top: 50px;
 }
+
 
 button {
   border-radius: 8px;
@@ -62,3 +64,33 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Navbar.css */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background: #6572FD;
+  padding: 5px 20px;
+  width: 100%;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+}
+
+.nav-logo {
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.company-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+
+
+
