@@ -1,12 +1,14 @@
-//import {NavLink} from "react-dom-router"
-
-
+// Navbar.jsx
+import React from 'react';
 
 function Navbar() {
   return (
-    <Navbar>StackTracker</Navbar>
-  )
+    <nav className="Navbar">
+      <h3 className='nav-logo'>StackTracker</h3>
+    </nav>
+  );
 
 }
 
 export default Navbar;
+
