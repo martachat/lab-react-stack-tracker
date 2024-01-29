@@ -1,12 +1,41 @@
-//import { Link, useParams } from "react-router-dom";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 
-function CompanyPage() {
+function CompanyPage({ companies }) {
+  const { companySlug } = useParams();
+
+  const company = companies.find((e) => e.slug === companySlug);
+
+  console.log('Company Page Data:', company);
+
+
+  
+  /*if (!company) {
+    return <div>Company not found</div>;
+  }*/
+
   return (
     <div>
-      <h1>Company Profile</h1>
+      <h1>{company.name}</h1>
+      <p>Website: <a href={company.website} target="_blank" rel="noopener noreferrer">{company.website}</a></p>
+      <p>Description: {company.description}</p>
+      <img src={company.logo} alt={`Logo of ${company.name}`} style={{ maxWidth: '200px' }} />
+
+      <h2>Tech Stack</h2>
+      <ul>
+        {company.techStack.map((tech) => (
+          <li key={tech.id}>
+            <Link to={`/tech/${tech.slug}`}>
+              <img src={tech.image} alt={`Logo of ${tech.name}`} style={{ maxWidth: '50px' }} />
+              {tech.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
+
 
 export default CompanyPage;
 
