@@ -22,7 +22,7 @@ function App() {
         ></Route>
         <Route
           path="/tech/:slug"
-          element={<TechnologyPage></TechnologyPage>}
+          element={<TechnologyPage technologies={technologiesJSON}></TechnologyPage>}
         ></Route>
       </Routes>
     </div>
